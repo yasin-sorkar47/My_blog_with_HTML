@@ -1,0 +1,204 @@
+.header{
+    .topber{
+        background-color: $title-color;
+        padding: 5px 0;
+
+        .topber-content{
+            display: flex;
+            justify-content: space-between;
+
+            ul{
+                display: flex;
+                align-items: center;
+    
+                li{
+                    margin: 8px;
+        
+                    a {
+                        color: #fff;
+                        font-size: 12px;
+                        transition: all 0.3s;
+                    } 
+                }
+            }
+            .topber-list li:first-child{
+                margin-left: 0;
+            }
+
+            .topber-list a:hover{
+                color: $primary-color;
+            }
+
+            .topber-social li{
+                padding: 3px;
+                cursor: pointer;
+            }
+        
+            .topber-social li:last-child{
+                margin-right: 0;
+            } 
+        }       
+    }
+
+    .main-manue-content{
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+
+        .manue-list{
+            margin-bottom: 0;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 767.98px) {
+                width: 360px;
+                height: 100vh;
+                background-color: $primary-color;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 999;
+                flex-direction: column;
+                justify-content: center;
+                transform: translateX(100%);
+                transition: all 0.7s;
+                visibility: hidden;
+                opacity: 0;
+
+                &.active{
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+
+                li{
+                    a,
+                    a.active{
+                        font-size: 18px;
+                        color: #fff;
+
+                        &:hover{
+                            color: $title-color;
+                        }
+                    }
+
+                    a.active{
+                        color: $title-color;
+                    }
+                }
+            }
+
+            li{
+              margin: 0 10px;  
+
+              a{
+                font-size: 15px;
+                font-weight: 500;
+                padding: 5px;
+                color: $body-color;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: $primary-color;
+                }
+
+                &.active{
+                    color: $primary-color;
+                }
+                
+              }
+            }
+
+           
+        }
+    }
+
+    .manue-search {
+        @media (max-width: 767.98px){
+            margin-left: auto;
+        }
+         i{
+        font-size: 16px;
+        display: inline-block;
+        margin-left: 20px;
+        padding: 5px;
+        color: $title-color;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $primary-color;
+        }    
+    }
+
+    .search-area{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3;
+
+        .overly{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba($color: $title-color, $alpha: 0.95);
+            z-index: -1;
+        }
+
+        &.active{
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .form{
+            width: 450px;
+            position: relative;
+
+            input{
+                width: 100%;
+                display: block;
+                background-color: transparent;
+                border: 0;
+                border-bottom: 1px solid $border-color;
+                color: #fff;
+                font-size: 36px;
+            }
+
+            button{
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 0;
+                background-color: transparent;
+
+                i{
+                    color: #fff;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+    }
+
+    .mobile-icon{
+        width: 45px;
+        height: 45px;
+        background-color: $primary-color;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+}

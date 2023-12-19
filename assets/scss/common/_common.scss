@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li{
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: $body-font;
+    color: $body-color;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: $title-font;
+    color: $title-color;
+}
+
+
+
+:focus{
+    outline: none;
+    border: 0;
+}
+
+::selection{
+    background-color: $title-color;
+    color: #fff;
+}
+
+.back-to-top{
+        width: 50px;
+        height: 50px;
+        background-color: $title-color;
+        position: fixed;
+        right: 60px;
+        bottom: 60px;
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        transition: all 0.3s;
+        visibility: hidden;
+        opacity: 0;
+
+        &.active{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:hover{
+            background-color: $primary-color;
+        }
+}
+
+.page-overly{
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    
+    &.active{
+        visibility: visible;
+        opacity: 1;
+    }
+}

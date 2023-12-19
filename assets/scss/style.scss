@@ -1,0 +1,19 @@
+/*
+table of content
+
+1. Common css
+*/
+
+@import 'variables/variable';
+@import 'common/common';
+@import 'mixin/mixin';
+
+@import 'sections/header';
+@import 'sections/blog-cart';
+@import 'sections/sideber';
+@import 'sections/footer';
+
+@import 'pages/index';
+@import 'pages/blog';
+@import 'pages/contact';
+@import 'pages/single-blog';

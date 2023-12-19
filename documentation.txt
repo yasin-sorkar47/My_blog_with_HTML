@@ -1,0 +1,13 @@
+
+
+bootstrap = v5.3.2;
+font awsome = v6.4.2;
+jeqery = v3.7.1;
+
+banner Image =
+title length =
+discription length =
+
+title font = popince;
+body font = open sanse;
+Brand logo = 150px;
